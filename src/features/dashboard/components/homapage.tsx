@@ -12,7 +12,7 @@ export default function HomePage() {
         <div className="relative bg-gray-100 py-16 text-center">
           <h1 className="text-4xl font-bold text-gray-900">Welcome to Our Store</h1>
           <p className="mt-4 text-gray-600">Find the best products at unbeatable prices.</p>
-          <Link href="/dashboard/shop-now" className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">
+          <Link href="/shop-now" className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">
             Shop Now
           </Link>
         </div>
