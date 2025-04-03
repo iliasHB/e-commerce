@@ -6,45 +6,45 @@ import Link from 'next/link';
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  // CalendarIcon,
+  // ChartPieIcon,
+  // Cog6ToothIcon,
+  // DocumentDuplicateIcon,
+  // FolderIcon,
   HomeIcon,
-  UsersIcon,
-  XMarkIcon,
+  // UsersIcon,
+  // XMarkIcon,
   ShoppingCartIcon
 } from '@heroicons/react/24/outline'
 import {
   Button,
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  TransitionChild,
+  // Dialog,
+  // DialogBackdrop,
+  // DialogPanel,
+  // Menu,
+  // MenuButton,
+  // MenuItem,
+  // MenuItems,
+  // TransitionChild,
 } from '@headlessui/react'
 
-import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon },
   // { name: 'Order', href: '/order', icon: UsersIcon },
   { name: 'Cart', href: '/cart', icon: ShoppingCartIcon },
 ];
 
-const userNavigation = [
-  { name: 'Your profile', href: '#' },
-]
+// const userNavigation = [
+//   { name: 'Your profile', href: '#' },
+// ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const pathname = usePathname();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isLogin, setIsLogin] = useState(true);
 
   const handleLogout = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -104,12 +104,12 @@ export default function Header() {
 
               {/* Login Button & Dropdown */}
               <div className="relative">
-                <button
+                <Button
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500"
                   onClick={() => setIsLoginOpen(!isLoginOpen)}
                 >
                   Login
-                </button>
+                </Button>
 
                 {/* Dropdown Form */}
                 {isLoginOpen && (

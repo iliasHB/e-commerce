@@ -10,7 +10,7 @@ const categories = ["All", "Electronics", "Fashion", "Home Appliances"];
 
 const ShopNow = () => {
   const { addToCart } = useCartStore(); 
-  const [cart, setCart] = useState<{ id: number; name: string; price: number; imageUrl: string }[]>([]);
+  const [cart] = useState<{ id: number; name: string; price: number; imageUrl: string }[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Filter products based on category
