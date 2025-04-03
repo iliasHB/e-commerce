@@ -1,5 +1,6 @@
 'use client'
 import useCartStore from "@/components/store/cart-store";
+import { Button } from "@headlessui/react";
 import { TrashIcon } from '@heroicons/react/24/solid';
 
 const CartPage = () => {
@@ -26,16 +27,12 @@ const CartPage = () => {
                </div>
                <div className="flex flex-col items-end space-y-2">
                  <p className="text-lg font-semibold text-gray-900">${(item.price * 1).toFixed(2)}</p>
-                 <button 
+                 <Button 
                  onClick={() => removeFromCart(item.id)}
-                 className="text-red-600 hover:text-red-800"> <TrashIcon className="w-5 h-5 mr-2" /></button>
+                 className="text-red-600 hover:text-red-800"> <TrashIcon className="w-5 h-5 mr-2" />
+                 </Button>
                </div>
-                {/* <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600"
-                >
-                  Remove
-                </button> */}
+              
               </li>
             ))}
           </ul>

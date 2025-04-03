@@ -4,6 +4,7 @@ import products from '@/components/data/product';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { Button } from '@headlessui/react';
 
 const OrderPage = () => {
   const r = useRouter();
@@ -103,16 +104,16 @@ const OrderPage = () => {
             <p className="text-lg font-semibold text-gray-800">Total: ${product.price.toFixed(2)}</p>
           </div>
           <div className="mt-6 flex justify-between items-center">
-            <button
+            <Button
               onClick={handleShopNow}
               className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700">
               Continue Shopping
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={handlePlaceOrder}
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-500">
               Place Order
-            </button>
+            </Button>
           </div>
         </div>
       </div>

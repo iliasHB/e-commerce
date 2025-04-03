@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { ShoppingCartIcon, StarIcon } from '@heroicons/react/24/solid';
-// import products from '@/components/data/product';
 import Link from 'next/link';
 import useCartStore from '@/components/store/cart-store';
 import { Button } from '@headlessui/react';

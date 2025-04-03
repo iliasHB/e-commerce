@@ -17,6 +17,7 @@ import {
   ShoppingCartIcon
 } from '@heroicons/react/24/outline'
 import {
+  Button,
   Dialog,
   DialogBackdrop,
   DialogPanel,
@@ -56,12 +57,12 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Mobile Menu Button */}
-            <button
+            <Button
               className="md:hidden text-gray-700"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Bars3Icon className="w-6 h-6" />
-            </button>
+            </Button>
 
             {/* Left: App Name */}
             <div className="flex items-center space-x-6">
@@ -96,10 +97,10 @@ export default function Header() {
               </div>
 
               {/* Notifications */}
-              <button type="button" className="p-2.5 text-gray-400 hover:text-gray-500">
+              <Button type="button" className="p-2.5 text-gray-400 hover:text-gray-500">
                 <span className="sr-only">View notifications</span>
                 <BellIcon aria-hidden="true" className="size-6" />
-              </button>
+              </Button>
 
               {/* Login Button & Dropdown */}
               <div className="relative">
@@ -125,12 +126,12 @@ export default function Header() {
                         placeholder="Password"
                         className="w-full p-2 border mt-2 mb-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
-                      <button
+                      <Button
                         type="submit"
                         className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500"
                       >
                         Login
-                      </button>
+                      </Button>
                     </form>
                   </div>
                 )}
