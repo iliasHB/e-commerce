@@ -3,6 +3,7 @@ import { ShoppingCartIcon, StarIcon } from '@heroicons/react/24/solid';
 // import products from '@/components/data/product';
 import Link from 'next/link';
 import useCartStore from '@/components/store/cart-store';
+import { Button } from '@headlessui/react';
 
 // Define the product type
 type Product = {
@@ -18,7 +19,15 @@ type FeatureProductProps = {
 
 const FeatureProduct: React.FC<FeatureProductProps> = ({ products }) => {
   const { addToCart } = useCartStore();
-  // const { addToCart } = useCartStore();
+  const handleAddToCart = (product: Product) => {
+    alert(`Added to cart Successfully!`)
+    // Convert id to string when passing to cart
+    const productWithStringId = {
+      ...product,
+      id: product.id.toString(), // Convert the id to a string
+    };
+    addToCart(productWithStringId); // Add the product to the cart
+  };
   return (
     <div>
       {/* Featured Products */}
@@ -40,13 +49,14 @@ const FeatureProduct: React.FC<FeatureProductProps> = ({ products }) => {
                       <StarIcon key={index} className={`w-5 h-5 ${index < 4 ? 'text-yellow-500' : 'text-gray-300'}`} />
                     ))}
                   </div>
-                  <button 
-                  onClick={() => addToCart(product)}
-                  className="mt-4 flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                    <ShoppingCartIcon className="w-5 h-5 mr-2" /> Add to Cart
-                  </button>
+                  
                 </div>
               </Link>
+              <Button 
+                  onClick={() => handleAddToCart(product)}
+                  className="mt-4 flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                    <ShoppingCartIcon className="w-5 h-5 mr-2" /> Add to Cart
+                  </Button>
             </div>
 
 
