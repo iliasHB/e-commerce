@@ -1,10 +1,12 @@
+import { CartPage } from "@/features/cart";
 
-import CartPage from "@/features/cart/cart"
  
-export default function (){
+const Cart = () => {
     return (
         <>
         <CartPage />
         </>
     )
 }
+
+export default Cart;

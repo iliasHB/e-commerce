@@ -8,7 +8,7 @@ import { Button } from "@headlessui/react";
 import useCartStore from "@/components/store/cart-store";
 const categories = ["All", "Electronics", "Fashion", "Home Appliances"];
 
-const ShopNow = () => {
+export function ShopNow(){
   const { addToCart } = useCartStore(); 
   const [cart] = useState<{ id: number; name: string; price: number; imageUrl: string }[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -98,7 +98,7 @@ const ShopNow = () => {
   );
 };
 
-export default ShopNow;
+// export default ShopNow;
 
 
   {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

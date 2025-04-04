@@ -1,13 +1,13 @@
 import HomePage from "@/features/dashboard/components/homapage";
 
-export default function (){
+const Home = () => {
     return (
         <>
         <HomePage />
         </>
     )
 }
-
+export default Home;
 // import Image from "next/image";
 
 // export default function Home() {

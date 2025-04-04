@@ -1,10 +1,13 @@
 
-import OrderPage from "@/features/order/order"
- 
-export default function (){
+import { OrderPage } from "@/features/order"
+import { Suspense } from "react";
+
+const Order = () => {
     return (
-        <>
-        <OrderPage />
-        </>
+        <Suspense fallback={<div>Loading order...</div>}>
+            <OrderPage />
+        </Suspense>
     )
 }
+
+export default Order;

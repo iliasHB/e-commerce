@@ -1,10 +1,12 @@
 
-import ShopNow from "@/features/shop-now/shop-now"
+import {ShopNow} from "@/features/shop-now"
  
-export default function (){
+const Shop = () => {
     return (
         <>
         <ShopNow />
         </>
     )
 }
+
+export default Shop;

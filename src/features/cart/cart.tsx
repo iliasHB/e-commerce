@@ -2,8 +2,9 @@
 import useCartStore from "@/components/store/cart-store";
 import { Button } from "@headlessui/react";
 import { TrashIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
-const CartPage = () => {
+export function CartPage() {
   const { cart, removeFromCart, clearCart } = useCartStore();
 
   return (
@@ -18,7 +19,8 @@ const CartPage = () => {
             {cart.map((item, index) => (
               <li key={`${item.id}-${index}`} className="flex justify-between items-center border-b py-2">
                              <div className="flex items-center space-x-6 ">
-                <img src={item.imageUrl} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                <Image src={item.imageUrl} alt={item.name} width={100} height={100} className="rounded-md" />
+                {/* <img src={item.imageUrl} alt={item.name} className="w-20 h-20 object-cover rounded" /> */}
                  <div>
                    <h2 className="text-lg font-semibold text-gray-800">{item.name}</h2>
                    <p className="text-sm text-gray-600">Price: ${item.price}</p>

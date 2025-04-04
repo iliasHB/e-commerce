@@ -46,10 +46,10 @@ export default function Header() {
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const [isLogin, setIsLogin] = useState(true);
 
-  const handleLogout = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    // logout.mutate({});
-  }
+  // const handleLogout = (e: { preventDefault: () => void }) => {
+  //   e.preventDefault();
+  //   // logout.mutate({});
+  // }
 
   return (
     <>
